@@ -1,174 +1,329 @@
-🤖 UbiOver CLI
+# 🤖 UbiOver CLI
 
 <div align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1000&color=7B2CBF&center=true&vCenter=true&width=600&lines=Gerenciamento+Automatizado+de+Contas;Interface+Híbrida+CLI+%2B+Web+UI;Segurança+com+HWID+%26+Supabase;Automação+com+Pyppeteer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1000&color=7B2CBF&center=true&vCenter=true&width=600&lines=Gerenciamento+Automatizado+de+Contas;Interface+Híbrida+CLI+%2B+Web+UI;Segurança+com+HWID+%26+Supabase;Automação+com+Pyppeteer" alt="Typing SVG" />
 </div>
 
 <div align="center">
-
+  
+  ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+  ![Rich](https://img.shields.io/badge/Rich-CLI-97266D?style=for-the-badge&logo=python&logoColor=white)
+  ![PyWebView](https://img.shields.io/badge/pywebview-GUI-8A2BE2?style=for-the-badge&logo=python&logoColor=white)
+  ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+  ![Pyppeteer](https://img.shields.io/badge/Pyppeteer-40B5A4?style=for-the-badge&logo=puppeteer&logoColor=white)
+  ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+  
 </div>
-🎬 Demonstração em Ação
+
+---
+
+## 🎬 Demonstração em Ação
 
 <div align="center">
-<em>A interface cyberpunk do UbiOver CLI, construída com Rich.</em>
-<br><br>
-<img src="https://github.com/Ansbach-0/UbiOver-CLI/raw/main/ubiover_menu_final.gif" alt="Demonstração do UbiOver CLI" width="800px" />
+  <em>A interface cyberpunk do UbiOver CLI, construída com Rich.</em>
+  <br><br>
+  <img src="https://github.com/Ansbach-0/UbiOver-CLI/raw/main/ubiover_menu_final.gif" alt="Demonstração do UbiOver CLI" width="800px" />
 </div>
-📋 Sobre o Projeto
 
-UbiOver CLI é uma poderosa aplicação de console (CLI) com uma interface web integrada para automatizar o gerenciamento de contas e o envio de créditos R6. Construído com uma stack de tecnologias modernas, o projeto utiliza:
+---
 
-    Rich para uma interface interativa e visualmente rica no terminal.
+## 📋 Sobre o Projeto
 
-    pywebview para renderizar uma GUI com HTML/CSS/JS, permitindo a seleção visual de itens.
+**UbiOver CLI** é uma poderosa aplicação de console (CLI) com uma **interface web integrada** para automatizar o gerenciamento de contas e o envio de créditos R6. Construído com uma stack de tecnologias modernas:
 
-    Supabase como backend para banco de dados e autenticação segura.
+- **Rich** - Interface interativa e visualmente rica no terminal
+- **pywebview** - GUI renderizada com HTML/CSS/JS para seleção visual de itens  
+- **Supabase** - Backend robusto para banco de dados e autenticação segura
+- **Pyppeteer** - Automação e web scraping avançado
 
-    Pyppeteer para automação e web scraping robusto.
+A segurança é um pilar central, com um sistema de login que valida a identidade do usuário através de **HWID (Hardware ID)**, garantindo que o acesso seja restrito a dispositivos autorizados.
 
-A segurança é um pilar central, com um sistema de login que valida a identidade do usuário através de HWID (Hardware ID), garantindo que o acesso seja restrito a dispositivos autorizados.
-✨ Funcionalidades Principais
+---
 
-Recurso
-	
+## ✨ Funcionalidades Principais
 
-Descrição
+<table>
+<tr>
+<td width="50%">
 
-🔐 Autenticação Segura
-	
+### 🔐 Segurança & Autenticação
+- **Login com Supabase** e verificação de HWID
+- **Validação de dispositivos** autorizados
+- **Sessões seguras** com tokens criptografados
 
-Login com Supabase e verificação de HWID para máxima segurança.
+### 🎮 Automação Inteligente
+- **Pyppeteer** para automação web robusta
+- **Multithread** para operações não-bloqueantes
+- **Gerenciamento de sessões** persistente
 
-🗂️ Gerenciamento CRUD
-	
+</td>
+<td width="50%">
 
-Crie, visualize, edite e exclua contas (mestras ou comuns) diretamente pela interface.
+### 💼 Gerenciamento CRUD
+- **Criar, visualizar, editar e excluir** contas
+- **Contas mestras** (origem) e **comuns** (destino)
+- **Sincronização automática** com banco de dados
 
-🤖 Automação Inteligente
-	
+### 🖥️ Interface Híbrida
+- **CLI rápido** com Rich para navegação
+- **GUI intuitiva** com pywebview para seleções
+- **Experiência de usuário** otimizada
 
-Utiliza Pyppeteer para automatizar o envio de créditos R6 de forma eficiente.
+</td>
+</tr>
+</table>
 
-💻 Interface Híbrida
-	
+---
 
-O melhor dos dois mundos: um CLI rápido com Rich e uma GUI intuitiva com pywebview.
-
-⚡ Operação Multithread
-	
-
-Executa tarefas de automação em threads separadas para não bloquear a interface do usuário.
-
-🛒 Seleção Visual de Itens
-	
-
-Uma janela web (HTML/CSS/JS) permite escolher facilmente o item para compra.
-🔄 Como Funciona (Fluxo de Uso)
+## 🔄 Fluxo de Funcionamento
 
 O fluxo de operação foi projetado para ser intuitivo e direto, guiando o usuário em cada etapa do processo.
 
-graph LR
-    A[Início] --> B(🔐 Login Seguro com HWID);
-    B --> C{MENU PRINCIPAL};
-    C --> D(➕ Adicionar Conta);
-    D --> E{Mestra ou Comum?};
-    E --> C;
-    C --> F(🛒 Enviar Créditos);
-    F --> G[🖼️ Escolher Item<br>(Janela pywebview)];
-    G --> H(💸 Definir Limite de Gastos);
-    H --> I(🚀 Iniciar Envio Automatizado);
-    I -- Atualiza BD --> J[📊 Créditos da Conta];
-    I --> C;
+```mermaid
+graph TB
+    A[🚀 Início] --> B[🔐 Login Seguro com HWID]
+    B --> C{📋 MENU PRINCIPAL}
+    
+    C --> D[➕ Adicionar Conta]
+    D --> E{Mestra ou Comum?}
+    E --> C
+    
+    C --> F[🛒 Enviar Créditos]
+    F --> G[🖼️ Escolher Item<br/>Janela pywebview]
+    G --> H[💸 Definir Limite de Gastos]
+    H --> I[🚀 Iniciar Envio Automatizado]
+    I --> J[📊 Atualizar Créditos no BD]
+    J --> C
+    
+    C --> K[📊 Visualizar Contas]
+    C --> L[⚙️ Configurações]
+    C --> M[🚪 Sair]
+    
+    style A fill:#7B2CBF,stroke:#fff,stroke-width:2px,color:#fff
+    style C fill:#97266D,stroke:#fff,stroke-width:2px,color:#fff
+    style I fill:#40B5A4,stroke:#fff,stroke-width:2px,color:#fff
+```
 
-Passo a Passo:
+### Passo a Passo Detalhado:
 
-    Login: O usuário inicia a aplicação e realiza o login, que é validado pelo Supabase e pelo HWID do dispositivo.
+1. **🔐 Autenticação:** Login validado pelo Supabase com verificação HWID
+2. **📋 Menu Principal:** Interface centralizada para todas as operações
+3. **➕ Gerenciamento:** Adicionar contas mestras (origem) ou comuns (destino)
+4. **🛒 Seleção:** Interface web para escolha visual de itens
+5. **💸 Configuração:** Definir limites de gastos e parâmetros
+6. **🤖 Automação:** Processo automatizado em thread separada
+7. **📊 Atualização:** Sincronização automática dos saldos no banco
+8. **✅ Finalização:** Relatório de sucesso e retorno ao menu
 
-    Gerenciamento de Contas: No menu, o usuário pode adicionar novas contas, definindo-as como "mestra" (de onde saem os créditos) ou "comum" (que recebe os créditos).
+---
 
-    Seleção de Itens: Ao optar por enviar créditos, uma janela pywebview é aberta, exibindo uma interface web (HTML/CSS/JS) onde o usuário pode visualizar e selecionar o item desejado para a "compra".
+## 🏗️ Arquitetura do Sistema
 
-    Configuração: O usuário define a quantidade máxima de créditos que a conta mestra pode gastar na operação.
+O sistema integra CLI e GUI para uma experiência completa e eficiente.
 
-    Automação: A aplicação inicia o processo de automação com Pyppeteer em uma thread separada, realizando a transferência dos créditos.
-
-    Atualização: Ao final, a quantidade de créditos em cada conta envolvida é atualizada automaticamente no banco de dados.
-
-    Retorno: A aplicação informa o sucesso da operação e retorna ao menu principal.
-
-🛠️ Tecnologias e Arquitetura
-
-O sistema integra uma CLI e uma GUI para uma experiência de usuário completa e eficiente.
-
+```mermaid
 graph TD
-    subgraph "Interface do Usuário"
-        A[👤 Usuário] --> B{💻 CLI (Rich)};
-        B -- Abre Janela --> C[🖼️ GUI Web (pywebview)];
-        C -- Retorna Seleção --> B;
+    subgraph "🖥️ Interface do Usuário"
+        A[👤 Usuário] --> B[💻 CLI com Rich]
+        B -.-> C[🖼️ GUI Web com pywebview]
+        C -.-> B
     end
 
-    subgraph "Backend & Segurança"
-        B --> D{🔐 Autenticação};
-        D --> E[🛡️ Validação de HWID];
-        D --> F[☁️ Supabase Auth];
+    subgraph "🔐 Camada de Segurança"
+        B --> D[🛡️ Sistema de Autenticação]
+        D --> E[🔑 Validação HWID]
+        D --> F[☁️ Supabase Auth]
     end
 
-    subgraph "Core de Automação (Multithread)"
-        B --> G[⚙️ Gerenciador de Tarefas];
-        G -- Inicia Thread --> H[🤖 Scraper (Pyppeteer)];
-        H -- Gerencia Sessão --> I[📄 sessions.json];
-        H -- Interage com --> J[🌐 Website Externo];
+    subgraph "⚙️ Core de Automação"
+        B --> G[🧵 Gerenciador Multithread]
+        G --> H[🤖 Scraper Pyppeteer]
+        H --> I[📄 Gerenciador de Sessões]
+        H --> J[🌐 Interação Web]
     end
 
-    subgraph "Banco de Dados"
-        B --> K[🗄️ CRUD de Contas];
-        K <--> L[☁️ Supabase DB];
+    subgraph "🗄️ Camada de Dados"
+        B --> K[📊 CRUD Manager]
+        K <--> L[☁️ Supabase Database]
+        I <--> M[📁 sessions.json]
     end
 
-📦 Estrutura do Projeto
+    style A fill:#7B2CBF,stroke:#fff,stroke-width:2px,color:#fff
+    style D fill:#97266D,stroke:#fff,stroke-width:2px,color:#fff
+    style G fill:#40B5A4,stroke:#fff,stroke-width:2px,color:#fff
+    style L fill:#3ECF8E,stroke:#fff,stroke-width:2px,color:#fff
+```
 
-UbiOver-CLI/
-├── main.py                # Ponto de entrada da aplicação
-├── core/
-│   ├── auth.py            # Lógica de autenticação (Supabase, HWID)
-│   ├── scraper.py         # Lógica de automação (Pyppeteer)
-│   └── manager.py         # Funções CRUD para gerenciamento de contas
-├── ui/
-│   ├── components.py      # Componentes de UI reutilizáveis (tabelas, painéis)
-│   └── screens.py         # Telas da aplicação (login, menu principal)
-├── webview/
-│   ├── index.html         # Estrutura da GUI de seleção de itens
-│   ├── style.css          # Estilos da GUI
-│   └── script.js          # Lógica de interação da GUI
-├── database.py            # Módulo de conexão com o Supabase
-├── sessions/              # Diretório para armazenar sessões de login .json
-└── README.md              # Esta documentação
+---
 
-🤝 Como Contribuir
+## 📦 Estrutura do Projeto
 
-Contribuições são o que tornam a comunidade open-source um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será muito apreciada.
+```
+📁 UbiOver-CLI/
+├── 🐍 main.py                 # Ponto de entrada da aplicação
+├── 📁 core/
+│   ├── 🔐 auth.py             # Sistema de autenticação (Supabase + HWID)
+│   ├── 🤖 scraper.py          # Engine de automação (Pyppeteer)
+│   └── 📊 manager.py          # Gerenciador CRUD de contas
+├── 📁 ui/
+│   ├── 🎨 components.py       # Componentes UI reutilizáveis
+│   └── 🖥️ screens.py          # Telas da aplicação
+├── 📁 webview/
+│   ├── 🌐 index.html          # Interface de seleção de itens
+│   ├── 🎨 style.css           # Estilos modernos da GUI
+│   └── ⚡ script.js           # Lógica de interação JavaScript
+├── 🗄️ database.py            # Conexão e operações Supabase
+├── 📁 sessions/               # Armazenamento de sessões (.json)
+├── 📋 requirements.txt        # Dependências Python
+└── 📖 README.md              # Esta documentação
+```
 
-    Faça um Fork do projeto.
+---
 
-    Crie sua Feature Branch (git checkout -b feature/AmazingFeature).
+## ⚡ Instalação e Configuração
 
-    Faça o Commit de suas mudanças (git commit -m 'Add some AmazingFeature').
+### Pré-requisitos
 
-    Faça o Push para a Branch (git push origin feature/AmazingFeature).
+- **Python 3.10+**
+- **Git**
+- **Conta Supabase** (para backend)
 
-    Abra um Pull Request.
+### Instalação Rápida
 
-📄 Licença
+```bash
+# 1. Clone o repositório
+git clone https://github.com/Ansbach-0/UbiOver-CLI.git
+cd UbiOver-CLI
 
-Distribuído sob a Licença MIT. Veja o arquivo LICENSE para mais informações.
-👨‍💻 Desenvolvedor
+# 2. Instale as dependências
+pip install -r requirements.txt
+
+# 3. Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o arquivo .env com suas credenciais do Supabase
+
+# 4. Execute a aplicação
+python main.py
+```
+
+### Configuração do Ambiente
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+SUPABASE_URL=sua_url_do_supabase
+SUPABASE_KEY=sua_chave_do_supabase
+DEBUG=False
+```
+
+---
+
+## 🚀 Como Usar
+
+### Primeiro Acesso
+
+1. **Execute** `python main.py`
+2. **Realize o login** com suas credenciais
+3. **Aguarde** a validação do HWID
+4. **Acesse** o menu principal
+
+### Adicionando Contas
+
+1. No menu principal, selecione **"Adicionar Conta"**
+2. Escolha o tipo: **Mestra** (origem) ou **Comum** (destino)
+3. Insira as credenciais da conta
+4. Confirme a adição
+
+### Enviando Créditos
+
+1. Selecione **"Enviar Créditos"**
+2. Escolha a **conta mestra** (origem)
+3. Escolha a **conta comum** (destino)
+4. Na janela web, **selecione o item** desejado
+5. Defina o **limite de gastos**
+6. **Inicie** o processo automatizado
+
+---
+
+## 🛠️ Tecnologias Utilizadas
 
 <div align="center">
 
-Vinícius Ansbach Costa
+| Tecnologia | Versão | Função |
+|:----------:|:------:|:-------|
+| ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | 3.10+ | Linguagem principal |
+| ![Rich](https://img.shields.io/badge/Rich-97266D?style=flat-square&logo=python&logoColor=white) | 13.0+ | Interface CLI avançada |
+| ![PyWebView](https://img.shields.io/badge/PyWebView-8A2BE2?style=flat-square&logo=python&logoColor=white) | 4.0+ | GUI híbrida |
+| ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white) | - | Backend e autenticação |
+| ![Pyppeteer](https://img.shields.io/badge/Pyppeteer-40B5A4?style=flat-square&logo=puppeteer&logoColor=white) | 1.0+ | Automação web |
 
 </div>
 
+---
+
+## 🤝 Contribuindo
+
+Contribuições são sempre bem-vindas! Siga estes passos:
+
+1. **Fork** o projeto
+2. **Crie** sua feature branch (`git checkout -b feature/NovaFuncionalidade`)
+3. **Commit** suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. **Push** para a branch (`git push origin feature/NovaFuncionalidade`)
+5. **Abra** um Pull Request
+
+### Diretrizes para Contribuição
+
+- Mantenha o código limpo e bem documentado
+- Siga o padrão PEP 8 para Python
+- Adicione testes para novas funcionalidades
+- Atualize a documentação quando necessário
+
+---
+
+## 📄 Licença
+
+Distribuído sob a **Licença MIT**. Veja `LICENSE` para mais informações.
+
+```
+MIT License - Livre para uso comercial e pessoal
+Copyright (c) 2024 Vinícius Ansbach Costa
+```
+
+---
+
+## 👨‍💻 Desenvolvedor
+
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColor=7B2CBF,97266D,40B5A4&height=120&section=footer&animation=fadeIn" />
+  <img src="https://github.com/Ansbach-0.png" width="100px" style="border-radius: 50%;" alt="Vinícius Ansbach"/>
+  <br><br>
+  
+  **Vinícius Ansbach Costa**
+  
+  *Desenvolvedor Full Stack & Automation Engineer*
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vinicius-ansbach)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ansbach-0)
+  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ansbach.vinicius@gmail.com)
+  
+</div>
+
+---
+
+## 💬 Suporte
+
+Encontrou um bug ou tem uma sugestão? 
+
+- 🐛 **Issues:** [GitHub Issues](https://github.com/Ansbach-0/UbiOver-CLI/issues)
+- 💬 **Discussões:** [GitHub Discussions](https://github.com/Ansbach-0/UbiOver-CLI/discussions)
+- 📧 **Email:** ansbach.vinicius@gmail.com
+
+---
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=120&section=footer&animation=fadeIn" />
+  
+  **⭐ Se este projeto foi útil para você, considere dar uma estrela!**
+  
+  ![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=Ansbach-0.UbiOver-CLI)
+  
 </div>
