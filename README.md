@@ -291,7 +291,7 @@ Copyright (c) 2024 Vinícius Ansbach Costa
 
 ---
 
-## 👨‍💻 Desenvolvedor
+## 👨‍💻 Desenvolvedores
 
 <div align="center">
   <img src="https://github.com/Ansbach-0.png" width="100px" style="border-radius: 50%;" alt="Vinícius Ansbach"/>
@@ -304,6 +304,17 @@ Copyright (c) 2024 Vinícius Ansbach Costa
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vinicius-ansbach)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ansbach-0)
   [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ansbach.vinicius@gmail.com)
+  
+  <br><br>
+  
+  <img src="https://github.com/AndreRachid-rgb.png" width="100px" style="border-radius: 50%;" alt="André Rachid"/>
+  <br><br>
+  
+  **André Rachid**
+  
+  *Desenvolvedor Full Stack*
+  
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreRachid-rgb)
   
 </div>
 
